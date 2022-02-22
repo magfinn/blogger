@@ -55,11 +55,13 @@ router.get('/:id', (req, res) => {
 // POST/ create new user
 router.post('/', (req, res) => {
     User.create({
+        email: req.body.email,
         username: req.body.username,
         password: req.body.password
     })
     .then(dbUserData => {
         req.session.save(() => {
+            req.session.user_email = dbUserData.email;
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
