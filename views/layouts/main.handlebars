@@ -2,32 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Tech News</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {{!-- Bootstrap for styling --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    {{!-- bulma styling --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- local stylesheet -->
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Blogger</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
             <h1>
-                <a href="/">Just Tech News</a>
+                <a href="/">Blogger</a>
             </h1>
-            <nav>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="/">
+                            Home
+                        </a>
+
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    {{#if loggedIn}}
+                                    <a href="/dashboard">dashboard</a>
+                                    <button id="logout" class="btn-no-style">logout</button>
+                                    {{else}}
+                                    <a class="button is-primary" href="/login">
+                                        <strong>Login/ Signup</strong>
+                                    </a>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+            {{!-- <nav>
                 {{#if loggedIn}}
                 <a href="/dashboard">dashboard</a>
                 <button id="logout" class="btn-no-style">logout</button>
                 {{else}}
                 <a href="/login">login</a>
                 {{/if}}
-            </nav>
+            </nav> --}}
         </header>
         <main>
             {{{ body }}}
         </main>
         <footer>
-            Thanks for visiting!
+            Get your blog on!
         </footer>
     </div>
 
