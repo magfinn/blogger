@@ -1,32 +1,14 @@
+{{#if posts.length}}
+
 <section>
-    <div class="container">
-        <h2>New Post:</h2>
-        <form class="new-post-form" method="POST" action="./dashboard.handlebars">
-            <div>
-                <label for="post-title">Title</label>
-                <input type="text" id="post-title" name="post-title" />
-            </div>
-            <div>
-                <label for="post-content">Content</label>
-                <input id="post-content" name="post-content" />
-            </div>
-            <button type="submit" class="btn primary">Create</button>
-        </form>
-    </div>
+    <h2>My Posts</h2>
+    {{#each posts as |post|}}
+    {{> post-info post}}
+    {{/each}}
 </section>
 
-{{#if posts.length}}
-<section>
-    <div class="container">
-        <h2>My Posts:</h2>
-        {{#each posts as |post|}}
-        <div class="card">
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </div>
-        {{/each}}
-    </div>
-</section>
 {{/if}}
+
+<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
 
 <script src="/javascript/add-post.js"></script>

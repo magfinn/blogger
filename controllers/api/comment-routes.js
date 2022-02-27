@@ -31,7 +31,7 @@ router.post('/', withAuth, (req, res) => {
   // check the session
   if (req.session) {
     Comment.create({
-      comment_text: req.body.comment_text,
+      comment_text: req.body.commentBody,
       post_id: req.body.post_id,
       user_id: req.session.user_id
     })

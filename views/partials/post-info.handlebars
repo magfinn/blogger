@@ -1,11 +1,16 @@
-<article class="post">
-  <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+<div class="card">
+  <div class="card-header">
+    <a class="link" href="/post/{{id}}">{{title}}</a></h4>
   </div>
-  <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  <div class='card-content'>
+    {{content}}
   </div>
-</article>
+  <div class="card-footer">
+    <p>Posted by {{user.username}} on {{format_date created_at}}</p>
+    <button type='submit' class='btn' id='edit'>Edit</button>
+    <button type='submit' class='btn' id='delete'>Delete</button>
+  </div>
+</div>
+
+<script src="javascript/edit-post.js"></script>
+<script src='javascript/delete-post.js'></script>

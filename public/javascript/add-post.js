@@ -17,6 +17,7 @@ async function newFormHandler(event) {
 
   if (response.ok) {
     alert('Posted!');
+    document.location.replace('/dashboard')
     return;
   } else {
     alert(response.statusText);

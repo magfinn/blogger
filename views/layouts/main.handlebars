@@ -29,35 +29,22 @@
             </h1>
             <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-menu">
-                    <div class="navbar-start">
-                        <a class="navbar-item" href="/">
-                            Home
-                        </a>
-
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                <div class="buttons">
-                                    {{#if loggedIn}}
-                                    <a href="/dashboard">dashboard</a>
-                                    <button id="logout" class="btn-no-style">logout</button>
-                                    {{else}}
-                                    <a class="button is-primary" href="/login">
-                                        <strong>Login/ Signup</strong>
-                                    </a>
-                                    {{/if}}
-                                </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                {{#if loggedIn}}
+                                <a href="/dashboard">My Dashboard</a>
+                                <button id="logout" class="btn-no-style">Logout</button>
+                                {{else}}
+                                <a class="button is-primary" href="/login">
+                                    <strong>Login/Signup</strong>
+                                </a>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
+                </div>
             </nav>
-            {{!-- <nav>
-                {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
-                {{else}}
-                <a href="/login">login</a>
-                {{/if}}
-            </nav> --}}
         </header>
         <main>
             {{{ body }}}
@@ -66,10 +53,9 @@
             Get your blog on!
         </footer>
     </div>
-
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
 </body>
 
 </html>
+
+<script src='javascript/login.js'></script>
+<script src='javascript/logout.js'></script>
