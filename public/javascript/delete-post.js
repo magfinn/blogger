@@ -1,3 +1,4 @@
+
 async function deleteFormHandler(event) {
   event.preventDefault();
 
@@ -15,4 +16,4 @@ async function deleteFormHandler(event) {
   }
 }
 
-document.querySelector('#delete').addEventListener('click', deleteFormHandler);
+  document.querySelector('#delete').addEventListener('click', deleteFormHandler);

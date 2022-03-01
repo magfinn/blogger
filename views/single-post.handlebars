@@ -1,6 +1,8 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
+
+
 <div class='card'>
   <form class="comment-form card-body" id='comment-form'>
 
@@ -11,6 +13,10 @@
     <button type="submit" class='btn'>Submit</button>
   </form>
 </div>
+<div id='edit-delete'>
+  <button type='submit' class='btn' id='edit'>Edit</button>
+  <button type='submit' class='btn' id='delete'>Delete</button>
+</div>
 {{/if}}
 
 
@@ -18,3 +24,6 @@
 <script src="/javascript/comment.js"></script>
 
 {{/if}}
+
+<script src="javascript/edit-post.js"></script>
+<script src='javascript/delete-post.js'></script>
