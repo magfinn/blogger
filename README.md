@@ -14,17 +14,18 @@
 ## ✅ Installing / Getting Started
 
 > ### 🧰 Requirements
->>RESTful API
+
+RESTful API
 > Node.js
 > Express.js 
 
->> Database
+Database
 > MySQL
 > MySQL2
 > Sequelize
 > donenv
 
->> Front-end
+Front-end
 > Handlebars.js
 > bcrypt
 > express-session and connect-session-sequelize
@@ -65,9 +66,9 @@ In your root directory, seed your database with the command:
 Start your server:
 `npm start`
 
-## Demo
+## Links
 
-<img src='./public/assets/screenshot'>
+Deployed App: https://blogger-mvc.herokuapp.com/
 
 ## 🚥 Tests
 
