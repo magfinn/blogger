@@ -6,32 +6,31 @@ body,
 html {
   height: 100%;
   padding: 0;
-  margin: 0;
   font-family: sans-serif;
   color: #333;
 }
-
+h1 {
+  font-size: 30px;
+  margin-left: 10px;
+}
 a {
-  text-decoration: none;
-  color: #225ca3;
-  font-weight: bold;
-  transition: color 0.1s;
-}
-
-a:hover {
-  color: #3486eb;
-}
-
-button {
-  background-color: #225ca3;
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.1s;
-  cursor: pointer;
-  border-radius: 5px;
-}
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  button {
+    border: 0;
+    padding: 1%;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 
 button:hover {
   background-color: #3486eb;
@@ -68,31 +67,28 @@ form label {
   display: block;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
+ .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
-header {
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
-}
-
-header h1 {
-  font-size: 1em;
-}
-
-main {
-  flex: 1;
-  padding: 2% 4%;
-}
+  header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1%;
+    margin: 10px;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
 
 .btn-no-style {
   background: none;

@@ -1,43 +1,92 @@
-# blogger
-Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
+<h1 align="center">✨Blogger✨</h1>
 
-Your challenge this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+<p>
+<a href="https://opensource.org/licenses/MIT">
+<img alt = "License MIT" src="https://img.shields.io/badge/license-MIT-success.svg" target="_blank" /></a>
+</p>
 
-User Story
-AS A developer who writes about tech
-I WANT a CMS-style blog site
-SO THAT I can publish articles, blog posts, and my thoughts and opinions
-Acceptance Criteria
-GIVEN a CMS-style blog site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-WHEN I click on the homepage option
-THEN I am taken to the homepage
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+## 📜 Description
+
+> Blog post forum where developers can publish their blog posts and comment on other developers’ posts. 
+
+🔗 <a href = 'https://github.com/magfinn/blogger'>Link</a>
+
+## ✅ Installing / Getting Started
+
+> ### 🧰 Requirements
+>>RESTful API
+> Node.js
+> Express.js 
+
+>> Database
+> MySQL
+> MySQL2
+> Sequelize
+> donenv
+
+>> Front-end
+> Handlebars.js
+> bcrypt
+> express-session and connect-session-sequelize
+
+>> Deployed with Heroku
+
+To get started, clone the repo:
+`git clone git@github.com:magfinn/blogger.git`
+
+> > This project uses the Express MySQL2 and Sequelize packages to connect Express.js API to a MySQl database and the dotenv package to use environment variables to store sensitive data, including your MySQl username and password.
+
+Using the node installer package, install dependencies:
+`npm i`
+
+Create a new .env file and enter your credentials:
+DB_Name='blogger'
+DB_User=[your username]
+DB_PW=[your password]
+
+Create your database:
+
+Log in with the MySQl Shell command
+`mysql -u [username] -p`
+
+and enter your password.
+
+Create your database:
+`source db/schema.sql`
+
+Confirm that you created the db:
+`SHOW DATABASES`
+
+Exit MySQL `quit`
+
+In your root directory, seed your database with the command:
+`npm run seed`
+
+Start your server:
+`npm start`
+
+## Demo
+
+<img src='./public/assets/screenshot'>
+
+## 🚥 Tests
+
+Tested routes with Insomnia. Tested on localhost before deploying to Heroku. 
+
+## 🤝 Contributing
+
+## ❓ Questions?
+
+> Have questions or need more information? Contact me by <a href='mailto:magfin@github.com'>e-mail</a>.
+
+**Maggie Finnegan**
+
+- Github: [@magfinn](https://github.com/magfinn)
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+---
+
+\_This README was generated with ❤️ by [Quick, Read Me!](https://github.com/magfinn/Quick-README-)
