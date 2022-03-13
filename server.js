@@ -7,6 +7,8 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.set("port", PORT)
+
 //use handlebars for html
 const exphbs = require('express-handlebars');
 //pass helpers
@@ -20,7 +22,7 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db:sequelize
+    db: sequelize
   })
 };
 
