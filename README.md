@@ -9,7 +9,7 @@
 
 > Blog post forum where developers can publish their blog posts and comment on other developers’ posts. 
 
-🔗 <a href = 'https://github.com/magfinn/blogger'>Link</a>
+🔗 <a href = 'https://blogger-mvc.herokuapp.com/'>Link</a>
 
 ## ✅ Installing / Getting Started
 
